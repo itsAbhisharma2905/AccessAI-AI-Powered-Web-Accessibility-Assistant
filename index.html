@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceFirst - Your Voice-Enabled Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-microphone-alt"></i>
+                <span>VoiceFirst</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#form">Voice Form</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="voice-controls">
+                <button class="voice-btn" id="listenBtn" title="Start Listening">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="voice-btn" id="readBtn" title="Read Content">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button class="voice-btn" id="helpBtn" title="Voice Commands">
+                    <i class="fas fa-question"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Experience the Web with Your Voice</h1>
+            <p>Navigate, interact, and control our website completely hands-free using advanced voice recognition technology.</p>
+            <button class="btn" id="startVoiceBtn">Start Voice Experience</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title">Voice-Enabled Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <h3>Voice Navigation</h3>
+                <p>Move through our website effortlessly with simple voice commands like "Go to home" or "Scroll down".</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScF6KhOWtHVcj43AeSU1JaIdxGTT9JZEwuX2ps8E0g_mADW7Q/viewform?usp=header" class="feature-card" style="text-decoration: none; color: inherit;">
+                <div class="feature-icon">
+                    <i class="fas fa-keyboard"></i>
+                </div>
+                <h3>Voice Form Filling</h3>
+                <p>Complete forms without typing. Just speak and our system will fill in the fields for you automatically.</p>
+            </a>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Text-to-Speech</h3>
+                <p>Have our website read content aloud to you with clear, natural-sounding voices in multiple languages.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Smart Recognition</h3>
+                <p>Our advanced AI understands natural language commands and adapts to your speech patterns over time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="voice-form-section" id="form">
+        <div class="voice-form-container">
+            <h2>Voice-Enabled Contact Form</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Say 'My name is [your name]'" required>
+                    <button type="button" class="voice-field-btn" data-field="name" title="Fill with voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Say 'My email is [your email]'" required>
+                    <button type="button" class="voice-field-btn" data-field="email" title="Fill with voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Say 'My phone is [your number]'">
+                    <button type="button" class="voice-field-btn" data-field="phone" title="Fill with voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="text" id="dob" name="dob">
+                    <button type="button" class="voice-field-btn" data-field="dob" title="Fill with voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Say 'My address is [your address]'"></textarea>
+                    <button type="button" class="voice-field-btn" data-field="address" title="Fill with voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <button type="button" class="voice-field-btn" data-field="subject" title="Fill with voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Speak your message" required></textarea>
+                    <button type="button" class="voice-field-btn" data-field="message" title="Fill with voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+               
+                <div class="form-footer">
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn" id="fillAllBtn">Fill All with Voice</button>
+                </div>
+            </form>
+            <div class="voice-feedback" id="voiceFeedback">
+                <p><span class="status-indicator" id="statusIndicator"></span> <span id="feedbackText">Ready to listen</span></p>
+                <p id="transcriptText"></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="voice-command-helper" id="commandHelper">
+        <h3>Available Voice Commands <button id="closeHelper"><i class="fas fa-times"></i></button></h3>
+        <div id="helperContent">
+            <h3>Navigation Commands</h3>
+            <ul>
+                <li>"Go to [section]" - Navigate to different sections (home, features, form, about)</li>
+                <li>"Scroll up/down" - Move the page up or down</li>
+                <li>"Go back" - Return to the previous page</li>
+            </ul>
+            
+            <h3>Form Commands</h3>
+            <ul>
+                <li>"Fill form" - Start form filling mode</li>
+                <li>"My name is [name]" - Set your name</li>
+                <li>"My email is [email]" - Set your email</li>
+                <li>"My phone is [number]" - Set your phone number</li>
+                <li>"Subject is [subject]" - Set the subject</li>
+                <li>"Message is [text]" - Set your message</li>
+                <li>"My date of birth is [date]" - Set date of birth</li>
+                <li>"My address is [address]" - Set your address</li>
+                <li>"Gender is [male/female/other]" - Set gender</li>
+                <li>"Submit form" - Submit the completed form</li>
+                <li>"Reset form" - Clear all form fields</li>
+            </ul>
+            
+            <h3>Control Commands</h3>
+            <ul>
+                <li>"Start listening" - Activate voice control</li>
+                <li>"Stop listening" - Deactivate voice control</li>
+                <li>"Read content" - Read the current page content</li>
+                <li>"Read instructions" - Hear how to use this system</li>
+                <li>"Show commands" - Display available commands</li>
+                <li>"Confirm" - Confirm the previous action</li>
+                <li>"Cancel" - Cancel the current operation</li>
+            </ul>
+            
+            <h3>Settings Commands</h3>
+            <ul>
+                <li>"Faster speech" - Increase speech rate</li>
+                <li>"Slower speech" - Decrease speech rate</li>
+                <li>"Higher pitch" - Increase voice pitch</li>
+                <li>"Lower pitch" - Decrease voice pitch</li>
+                <li>"Change voice" - Switch to a different voice</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="about">
+        <div class="footer-content">
+            <div class="footer-logo">VoiceFirst</div>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#form">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+            <p class="copyright">© 2023 VoiceFirst. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
